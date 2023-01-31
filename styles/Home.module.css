@@ -2,9 +2,116 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
   min-height: 100vh;
+  width:100vw;
+  background-image: url("/backgroundMountain.jpg");
+  background-size: cover;
+  background-position:left;
+}
+
+.h1, .paragraph{
+  color:var(--primary-color);
+  line-height: 45px;
+}
+
+.paragraph {
+  line-height: 22px;
+}
+
+.borderWhiteButton{
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  padding:5px 15px;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.borderWhiteButton:hover{
+  background-color: var(--primary-color);
+  color: var(--quaternary-color);
+}
+
+.lineBreak{
+  border-color:var(--secondary-color);
+  background-color:var(--secondary-color);
+  width:75%;
+  height:3px;
+  border-width: 0;
+  margin:20px 0
+}
+
+.flexboxColumn{
+  display:flex;
+  flex-direction: column;
+  width:430px;
+  margin:0 0 -7vh 20vw
+}
+
+.vertical{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+
+.flexboxRow{
+  display:flex;
+  flex-direction: row;
+  width:100%;
+  margin-top: 15px;
+}
+
+.downwardArrow{
+  position: absolute;
+  bottom: 155px;
+  right:10vw
+}
+
+.menu{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  width:250px;
+  height:250px;
+  background-image: url("/menuBackground.png");
+  background-size: cover;
+  color: var(--primary-color)
+}
+
+@media (max-width: 1000px) {
+  .flexboxColumn{
+    width:72vw;
+    margin:0 0 20vh 8vw
+  }
+  .main {
+    background-position:50%;
+  }
+  .downwardArrow{
+    bottom: 100px;
+    right:  18vw
+  } 
+}
+
+@media (max-width:600px){
+  .flexboxColumn{
+    width:66vw;
+    margin:0 0 30vh 8vw
+  }
+
+  .h1{
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+  .lineBreak{
+    margin:15px 0
+  }
+
+  .downwardArrow{
+    bottom: 50px;
+    right:  18vw
+  } 
 }
 
 .description {
