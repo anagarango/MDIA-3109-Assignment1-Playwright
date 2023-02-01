@@ -5,6 +5,10 @@
   font-family: sans-serif;
 }
 
+body{
+  overflow-x:hidden;
+}
+
 nav{
   width:100vw;
   display: flex;
@@ -12,8 +16,38 @@ nav{
   padding:30px 60px
 }
 
+p, h3{
+  color:var(--primary-color);
+  margin: 15px 0px;
+}
+
+p{
+  font-weight: 300;
+}
+
 div ul a{
   margin-top: 30px;
+}
+
+li{
+  list-style-type:none;
+  padding-bottom: 40px;
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ternary-color); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--quaternary-color); 
 }
 
 @media (max-width:1000px){
@@ -50,6 +84,28 @@ a {
   width: fit-content;
 }
 
+#carouselImage{
+  height:200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
+  padding: 0 25px
+}
+
+#testOnImageHere{
+  background-color: rgba(16,46,53,0.5);
+  padding: 10px;
+  margin: 0 50px;
+  font-weight: 300;
+  color:var(--primary-color)
+}
+
+.carouselArrow{
+  width: 40px;
+}
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

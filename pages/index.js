@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { useState } from 'react'
+import NavBar from '@/comps/nav'
+import MenuProp from '@/comps/menuPopUp'
 
 export default function Home() {
   const [menuPopup, setMenuPopup] = useState(false)
@@ -21,21 +23,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={styles.main}>
-        <nav>
-          <img src="/menu-icon.png" style={{width:"50px"}} onClick={()=>{MenuPopUp(true)}}></img>
-          <img src="/favicon.png" style={{width:"50px"}}></img>
-        </nav>
-        {menuPopup && <div className={styles.menu}>
-          <h1 className={styles.vertical} onClick={()=>{MenuPopUp(false)}}>X</h1>
-          <ul className={styles.vertical}>
-            <a href='/'>Home</a>
-            <a href='/about'>About</a>
-            <a href='/contact'>Contact</a>
-          </ul>
-          </div>}
+        <NavBar onClick={()=>{MenuPopUp(true)}}></NavBar>
+        {menuPopup && <MenuProp onClick={()=>{MenuPopUp(false)}}></MenuProp>}
         <div className={styles.flexboxColumn}>
           <h1 className={styles.h1}>An investment in knowledge pays the best interest.</h1>
-          <hr noshade className={styles.lineBreak}/>
+          <hr noshade="true" className={styles.lineBreak}/>
           <p className={styles.paragraph}>Different than a college or university, the British Columbia Institute of Technology offers practical, flexible, applied education with instructors who have direct, hands-on experience in their field.</p>
           <div className={styles.flexboxRow}>
             <a href='/about'>
@@ -49,7 +41,7 @@ export default function Home() {
         
         <a href='/about'>
           <span>
-            <img className={styles.downwardArrow} src="/downwardArrow.png" style={{width:"35px"}}/>
+            <img className={styles.downwardArrow} src="/downwardArrow.png"/>
           </span>
         </a>
         
