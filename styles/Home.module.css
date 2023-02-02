@@ -1,4 +1,5 @@
-.main, .mainAbout {
+/* global */
+.main, .mainAbout, .mainContact {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,24 +12,22 @@
   overflow-x:hidden;
 }
 
-.mainAbout{
-  background-color: var(--quaternary-color);
-  background-image: none;
-  align-items: center;
+.flexboxColumn, .flexboxColumnAbout{
+  display:flex;
+  flex-direction: column;
+  width:430px;
+  margin:0 0 -2vh 20vw
+}
+
+.flexboxRow, .flexboxRowAbout{
+  display:flex;
+  flex-direction: row;
+  width:100%;
 }
 
 .h1, .paragraph, .h1About{
   color:var(--primary-color);
   line-height: 45px;
-}
-
-.h1About{
-  width:fit-content;
-  padding: 0 10%
-}
-
-.paragraph{
-  line-height: 25px;
 }
 
 .borderWhiteButton{
@@ -54,41 +53,6 @@
   margin:15px 0
 }
 
-.lineBreakAbout{
-  width: 27%;
-}
-
-.flexboxColumn, .flexboxColumnAbout{
-  display:flex;
-  flex-direction: column;
-  width:430px;
-  margin:0 0 -2vh 20vw
-}
-
-.flexboxColumnAbout{
-  margin: 0;
-  width: 670px
-}
-
-.vertical{
-  display: flex;
-  flex-direction: column;
-  width: 35%;
-}
-
-.flexboxRow, .flexboxRowAbout{
-  display:flex;
-  flex-direction: row;
-  width:100%;
-}
-
-.flexboxRowAbout{
-  justify-content: center;
-  width:90vw;
-  align-items:center;
-  margin: 0 0 80px 0;
-}
-
 .downwardArrow{
   position: absolute;
   bottom: 155px;
@@ -104,8 +68,12 @@
   flex-direction: column;
 }
 
-.arrowsAboutUp{
-  bottom: 155px
+
+
+
+/* navbar */
+.nav{
+  margin-bottom: 70px;
 }
 
 .menu{
@@ -113,8 +81,8 @@
   display: flex;
   justify-content: center;
   padding-top: 50px;
-  width:250px;
-  height:250px;
+  width:270px;
+  height:270px;
   background-image: url("/menuBackground.png");
   background-size: cover;
   color: var(--primary-color);
@@ -122,31 +90,174 @@
   left:0
 }
 
+.vertical{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+
+
+
+/* home */
+.paragraph{
+  line-height: 25px;
+}
+
+
+
+
+/* about */
+.mainAbout{
+  background-color: var(--quaternary-color);
+  background-image: none;
+  align-items: center;
+}
+.h1About{
+  min-width:fit-content;
+  padding: 0 10%
+}
+
+.lineBreakAbout{
+  width: 27%;
+}
+
+.flexboxColumnAbout{
+  margin: 0;
+  width: 670px
+}
+
+.flexboxRowAbout{
+  justify-content: center;
+  width:90vw;
+  align-items:center;
+  margin: 0 0 80px 0;
+}
+
+.arrowsAboutUp{
+  bottom: 155px
+}
+
 .arrowSize{
   width: 35px;
 }
 
+
+
+
+/* contact */
+.mainContact{
+  background-image: url("/backgroundMountainUpsideDown.jpg");
+  align-items: center;
+  background-position:center;
+  background-size: cover;
+  justify-content: start;
+}
+.form{
+  display:flex; 
+  flex-direction:column;
+  align-items:flex-end
+}
+
+.table{
+  width:850px;
+  height:fit-content;
+  border:2px solid black;
+  padding:35px
+}
+
+.flex{
+  display: flex;
+  width:100%;
+}
+
+.tableHeader{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  width:50%;
+  margin-right: 5px;
+}
+
+.contactP{
+  padding:70px 0px
+}
+
+.errorMessage{
+  display: flex;
+  flex-direction: column;
+  width:850px;
+}
+
+
+
+
 @media (max-width: 1000px) {
+  /* home */
   .flexboxColumn{
     width:72vw;
-    margin:0 0 30vh 8vw
+    margin:0 0 25vh 8vw
   }
+
   .main {
     background-position:50%;
   }
+
   .downwardArrow{
     bottom: 100px;
     right:  18vw
   } 
+
+  .nav{
+    margin-bottom: 0px;
+  }
+
+
+
+  /* about */
+  .flexboxColumnAbout{
+    width: 43vw
+  }
+
+  .h1About{
+    width:fit-content;
+    padding: 0 30px;
+  }
+
+  .flexboxRowAbout{
+    margin: 0 0 50px 0;
+    width:100vw;
+  }
+
+  .lineBreakAbout{
+    width: 28%;
+  }
+
+
+
+  /* contact */
+  .table{
+    width:80vw;
+  }
+
+  .errorMessage{
+    width:80vw;
+  }
+  
+  .contactP{
+    padding:30px
+  }
 }
 
 @media (max-width:600px){
+  /* home */
   .flexboxColumn{
     width:66vw;
-    margin:0 0 40vh 8vw
+    margin:0 0 30vh 8vw
   }
 
   .h1{
+    width: fit-content;
     font-size: 22px;
     line-height: 35px;
   }
@@ -158,5 +269,40 @@
   .downwardArrow{
     bottom: 50px;
     right:  18vw
-  } 
+  }
+
+  .nav{
+    margin-bottom: 15px;
+  }
+
+
+
+  /* about */
+  .lineBreakAbout{
+    width:50%;
+    margin: 0 15px
+  }
+
+  .flexboxColumnAbout{
+    width:52vw
+  }
+
+  .flexboxRowAbout{
+    margin: 0 5px 65px 5px;
+    text-align: center;
+  }
+
+  .arrowsAbout, .arrowsAboutUp{
+    bottom: 50px;
+    right:65px;
+  }
+  
+  .arrowsAboutUp{
+    bottom: 105px
+  }
+
+  .h1About{
+    width:fit-content;
+    padding: 0px;
+  }
 }
