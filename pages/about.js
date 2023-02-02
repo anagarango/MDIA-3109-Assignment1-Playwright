@@ -29,9 +29,9 @@ export default function About() {
     }
   }
 
-  useEffect(()=>{
-    console.log(Words.indexOf(Words[Words.length-1]))
-  }, [])
+  // useEffect(()=>{
+  //   console.log(Words.indexOf(Words[Words.length-1]))
+  // }, [])
 
   return (
     <>
@@ -63,7 +63,7 @@ export default function About() {
           <p>Big Info is the largest program expo and information session at BCIT. It's your chancee to find out about all our programs - from business, computing, and health to engineering, trades, and applied sciences.</p>
           <p>If you missed our fall event the next Big Info is scheduled to return on February 15, 2023.</p>
           <h2 className={styles.h1}>Campus Tours</h2>
-          <p style={{marginBottom:"80px"}}>Tours run weekdays September to May, on our Burnaby campus. See BCIT in person and get a taste of campus life.</p>
+          <p style={{marginBottom:"50px"}}>Tours run weekdays September to May, on our Burnaby campus. See BCIT in person and get a taste of campus life.</p>
         </div>
 
         <div id='carouselImage' style={{backgroundImage:`url(/${position}.jpg)`}}>
